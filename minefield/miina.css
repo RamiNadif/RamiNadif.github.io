@@ -1,0 +1,62 @@
+#minefield {
+  border: solid 2px;
+
+  width: 548px;
+  height: 550px;
+  margin-left: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+header {
+  text-align: center;
+  padding-bottom: 10px;
+}
+option {
+  color: white;
+}
+#select {
+  background-color: rgb(34, 129, 34);
+  color: white;
+  padding: 10px;
+}
+#start {
+  padding: 10px;
+  background-color: rgb(34, 129, 34);
+  color: white;
+}
+.clone {
+  border: solid 3.63px;
+  animation: glow 7s linear infinite;
+  background: linear-gradient(0deg, rgb(248, 192, 9), black);
+}
+@keyframes glow {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+.clone:active {
+  color: yellow;
+}
+.clone:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.locked {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.shown {
+  display: block;
+  text-align: center;
+}
